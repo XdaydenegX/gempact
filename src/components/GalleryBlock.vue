@@ -2,7 +2,7 @@
   <div class="card" v-for="item in cards"  v-bind="{id: item.id}">
     <h1 class="card-title">{{item.title}}</h1>
     <div class="container" v-bind:class="{right: item.right}">
-    <img v-bind:src="item.img">
+    <div class="container-img" v-bind:class="[item.img]"></div>
       <h1>{{item.titleCard}}</h1>
       <p>{{item.text}}</p>
       <button>Перейти</button>
@@ -16,18 +16,18 @@ export default {
   name: "GalleryBlock",
   data: function() {
     return {
-      cards: [ { id: "card-1",  title: "Галерея персонажей", img: "src/assets/gallery-img.png", titleCard: "Демонстрация  персонажей игры и краткое описание", text: "Формирование представлений игрока об\n" +
+      cards: [ { id: "card-1",  title: "Галерея персонажей", img: "gallery", titleCard: "Демонстрация  персонажей игры и краткое описание", text: "Формирование представлений игрока об\n" +
             "определенном персонаже, демонстрация\n" +
             "артов и видеоматериалов, а так же\n" +
             "короткое описание его личной истории.", description: "Будут преставлены только персонажи\n" +
             "из тех регионов, которые уже добавлены\n" +
             "в игру. (Мондштадт, Ли Юэ, Инадзума)"},
-        { id: "card-2", title: "Подбор отрядов", img: "src/assets/squad-img.png", right: true, titleCard: "Подбор персонажей в отряды в помощь новичкам", text: "Иногда  у новых игроков, получивших своих первых персонажей из баннеров могут\n" +
+        { id: "card-2", title: "Подбор отрядов", img: "squad", right: true, titleCard: "Подбор персонажей в отряды в помощь новичкам", text: "Иногда  у новых игроков, получивших своих первых персонажей из баннеров могут\n" +
               "возникнуть проблемы с составленем отрядов.\n" +
               "В данном разделе будет возможность собрать отряд из 4 персонажей, а так же просмотреть\n" +
               "их способности и возможные элементальные реакции между персонажами отряда. ", description: "Так же будут представлены только персонажи из\n" +
               "уже вышедших регионов. "},
-        {id: "card-3",title: "Оружие", img: "src/assets/weapon-img.png", titleCard: "Перебор вариантов вооружения для ваших персонажей", text: "Выбор лучших вариантов оружия для ваших персонажей. Вы сможите просмотреть\n" +
+        {id: "card-3",title: "Оружие", img: "weapon", titleCard: "Перебор вариантов вооружения для ваших персонажей", text: "Выбор лучших вариантов оружия для ваших персонажей. Вы сможите просмотреть\n" +
               "достаточно возможных вариаций, подобрать \n" +
               "оружие различных рангов (легендарное, \n" +
               "эпическое и др) а так же материалы, требуемые\n" +
@@ -35,6 +35,11 @@ export default {
               "только те, что есть в игре на данный момент"}]
     }
   },
+  methods: {
+    getpath: function(path) {
+      return require(path);
+    }
+  }
 
 }
 </script>
@@ -62,8 +67,26 @@ export default {
   background-size: cover;
   background-image: url("../assets/bg-container.png");
 }
-.container img {
+.container-img {
   border-radius: 50px;
+  width: auto;
+  height: auto;
+  position: absolute;
+  background-position-y: center;
+  background-size: cover;
+  width: 43%;
+  height: 100%;
+}
+.container-img.gallery {
+  background-image: url("../assets/gallery-img.png");
+}
+
+.container-img.squad {
+  background-image: url("../assets/squad-img.png");
+
+}
+.container-img.weapon {
+  background-image: url("../assets/weapon-img.png");
 }
 .container h1 {
   color: white;
