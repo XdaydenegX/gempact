@@ -3,10 +3,9 @@
     <div class="gp-bg" onclick="window.location = '/'">
       <div class="sitename">Gempact</div>
     </div>
-    <div id="nav">
+    <div id="nav" v-if="home">
       <!--  <router-link to="/">Home</router-link> |-->
       <!--  <router-link to="/about">About</router-link>-->
-
         <a @click="scrollTo('card-1')">Галерея персонажей</a>
         <a @click="scrollTo('card-2')">Подбор отрядов</a>
         <a @click="scrollTo('card-3')">Оружие</a>
@@ -27,7 +26,13 @@ export default {
         behavior: 'smooth'
       })
     }
+  },
+  data() {
+    return {
+      home: window.location.pathname == '/' ? true : false,
+    }
   }
+
 }
 
 </script>

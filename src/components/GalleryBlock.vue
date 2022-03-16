@@ -1,5 +1,5 @@
 <template>
-  <div class="card" v-for="item in cards"  v-bind="{id: item.id}">
+  <div class="card" v-for="item in cards" v-bind="{id: item.id}">
     <h1 class="card-title">{{item.title}}</h1>
     <div class="container" v-bind:class="{right: item.right}">
     <div class="container-img" v-bind:class="[item.img]"></div>
@@ -36,9 +36,7 @@ export default {
     }
   },
   methods: {
-    getpath: function(path) {
-      return require(path);
-    }
+
   }
 
 }

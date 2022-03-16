@@ -24,13 +24,6 @@ export default {
     GalleryBlock
   },
   computed: {
-    list: function () {
-      var list = ["Hello world"];
-      for (let i = 0; i < 1000; i++) {
-        list.push("Hello world");
-      }
-      return list;
-    }
   }
 }
 </script>
