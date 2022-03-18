@@ -22,7 +22,7 @@ export default {
     scrollTo(el) {
 
       window.scrollBy({
-        top: document.getElementById(el).getBoundingClientRect().top - 150,
+        top: document.getElementById(el).getBoundingClientRect().top - 160,
         behavior: 'smooth'
       })
     }
