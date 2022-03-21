@@ -25,7 +25,7 @@ export default {
         { id: "card-2", title: "Подбор отрядов", img: "squad", right: true, titleCard: "Подбор персонажей в отряды в помощь новичкам", text: "Иногда  у новых игроков, получивших своих первых персонажей из баннеров могут\n" +
               "возникнуть проблемы с составленем отрядов.\n" +
               "В данном разделе будет возможность собрать отряд из 4 персонажей, а так же просмотреть\n" +
-              "их способности и возможные элементальные реакции между персонажами отряда. ", description: "Так же будут представлены только персонажи из\n" +
+              "их способности и возможные элементальные реакции между персонажами отрядами. ", description: "Так же будут представлены только персонажи из\n" +
               "уже вышедших регионов. ", to_url: '/squad'},
         {id: "card-3",title: "Оружие", img: "weapon", titleCard: "Перебор вариантов вооружения для ваших персонажей", text: "Выбор лучших вариантов оружия для ваших персонажей. Вы сможите просмотреть\n" +
               "достаточно возможных вариаций, подобрать \n" +
@@ -68,15 +68,15 @@ export default {
   background-position: center center;
   background-size: cover;
   background-image: url("../assets/bg-container.png");
+  overflow: hidden;
 }
 .container-img {
-  border-radius: 50px;
   width: auto;
   height: auto;
   position: absolute;
   background-position-y: center;
   background-size: cover;
-  width: 43%;
+  width: 46%;
   height: 100%;
 }
 .container-img.gallery {
@@ -92,7 +92,7 @@ export default {
 }
 .container h1 {
   color: white;
-  font-size: xxx-large;
+  font-size: 2.5vw;
   text-align: center;
   /* left: 0; */
    position: absolute;
@@ -104,19 +104,20 @@ export default {
   justify-content: center;
 }
 .container.right h1 {
-  left: 6%;
+  left: 5%;
 }
 .container p {
-  font-size: x-large;
+  font-size: 1.5vw;
   text-align: center;
+  line-height: normal;
   position: absolute;
-  width: 53%;
-  right: 6%;
-  top: 30%;
+  width: 40%;
+  right: 12%;
+  top: 28%;
 }
 .container.right p {
   left: 8%;
-  width: 50%;
+  width: 46%;
 }
 .container button {
   background: #FFCF0D;
@@ -124,34 +125,35 @@ export default {
   font-family: "TT_Skip-E";
   position: absolute;
   right: 24%;
-  height: 103px;
+  height: 6vw;
   border: 0;
   font-size: xx-large;
-  bottom: 26%;
-  width: 15%;
+  bottom: 17%;
+  width: 14vw;
   cursor: pointer;
   color: #341C00;
 }
 .container.right button {
-  left: 24%;
-  bottom: 23%;
+  left: 23.5%;
+  bottom: 14%;
   color: #341C00
 }
 
 .container span {
   position: absolute;
-  width: 22%;
+  width: 22vw;
   bottom: 2%;
   opacity: 0.6;
-  right: 21%;
+  right: 19.2%;
   /* left: 5%; */
   /* word-break: break-word; */
   text-align: center;
+  font-size: 0.8vw;
 
 }
 
 .container.right span {
-  left: 20%;
+  left: 18.9%;
 }
 
 .card {
@@ -162,4 +164,5 @@ position: relative;
 .right {
 justify-content: flex-end;
 }
+
 </style>

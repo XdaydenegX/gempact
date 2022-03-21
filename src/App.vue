@@ -43,6 +43,7 @@ body,
   display: flex;
   flex-direction: column;
   color: white;
+  overflow-x: hidden;
   height: auto !important;
 }
 main {

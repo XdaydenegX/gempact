@@ -42,7 +42,7 @@ export default {
 
 <style scoped>
 footer {
-  width: 100%;
+  width: 100vw;
   height: 30vw;
   /*background: #2e012f;*/
 }

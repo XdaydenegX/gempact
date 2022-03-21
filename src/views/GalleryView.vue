@@ -18,20 +18,58 @@
         </summary>
         <div class="char-story">
           <h1 class="char-name">Мона</h1>
-          <img class="char-elem" src=../assets/gidro-hover.png>
-          <img class="char-photo" src="../assets/char/char-info/mona-summary.png">
-          <div class="rarity">
-            <div class="star">&#10022; &#10022; &#10022; &#10022; &#10022;</div>
+          <div class="things">
+            <img class="char-elem" src=../assets/gidro-hover.png>
+            <img class="char-photo" src="../assets/char/char-info/mona-summary.png">
+            <div class="rarity">
+              <div class="star">&#10022; &#10022; &#10022; &#10022; &#10022;</div>
+            </div>
           </div>
-          <div class="char-info"></div>
-          <div class="char-annotation"></div>
+          <p class="p-m-list">Сильные и слабые стороны персонажа Мона</p>
+          <ul>
+            <h1 class="plus">Плюсы</h1>
+            <li>Уникальная анимация и скорость движения и<br>уворота</li>
+            <li>Создание приманки для врагов посредством<br>использования элементального навыка</li>
+            <li>Сильный Взрыв стихий и дополнительный урон<br>элементальных реакций</li>
+          </ul>
+          <ul>
+            <h1 class="minus">Минусы</h1>
+            <li>Низкие показатели защиты и здоровья</li>
+            <li>Малый урон без элементальных реакций</li>
+          </ul>
+          <div class="char-info">Мона Мегистус  —  таинственный астролог без гроша в кармане. Ее внешний вид довольно<br>экстравагантен, но видимо он позволяет ей лучше сливаться со своей Гидро стихией.<br>Анимация ее способностей выше всяких похвал, да и сами способности будут полезны<br>большинству путешественников. И не поскупитесь заказать ей обед ведь астролог это не<br>художник он не должен быть голоден, тем более такая милашка.</div>
+          <div class="char-arts">
+            <img src=../assets/char/char-info/char-art-1.jpg>
+            <img src=../assets/char/char-info/char-art-2.jpg>
+            <img src=../assets/char/char-info/char-art-3.jpg>
+            <img src=../assets/char/char-info/char-gif.gif>
+          </div>
+          <div class="char-annotation">
+            <span>Характеристики персонажа можно будет<br>
+              увидеть в подборе отрядов при выборе<br>
+              этого персонажа</span>
+          </div>
+          <button @click="CloseDetails($event.target)" class="char-btn">Скрыть</button>
         </div>
       </details>
     </div>
     <h1>Coming soon...</h1>
   </main>
 </template>
-
+<script>
+export default {
+  methods: {
+    CloseDetails: function(el) {
+      console.log(el);
+      window.scrollBy({
+        top: el.parentElement.parentElement.getBoundingClientRect().top - document.getElementsByTagName("header")[0].offsetHeight - 20,
+        // behavior: "smooth"
+      })
+      el.parentElement.parentElement.removeAttribute("open");
+    }
+  }
+}
+</script>
 <style>
 @media (min-width: 1024px) {
   h1 {
@@ -42,9 +80,10 @@
 .annotation {
   position: relative;
   left: 1%;
-  font-size: 1.2rem;
+  font-size: 1vw;
   opacity: 0.4;
   width: max-content;
+  margin-bottom: 10%;
 }
 
 h1 {
@@ -61,11 +100,11 @@ button {
   font-family: "TT_Skip-E";
   position: absolute;
   left: 60%;
-  height: 103px;
+  height: 5vw;
   top: 0%;
   border: 0;
-  font-size: x-large;
-  width: 15%;
+  font-size: 1.4vw;
+  width: 14vw;
   cursor: pointer;
   color: #341C00;
 }
@@ -82,6 +121,7 @@ button {
   align-items: center;
   font-size: xxx-large;
   transition: all 0.9s;
+  cursor: pointer;
 }
 
 .gallery-char:before, .gallery-char:after {
@@ -175,7 +215,7 @@ details[open] .char-story {
 
 .char-elem {
   position: relative;
-  width: 14%;
+  width: 200px;
   display: flex;
 }
 
@@ -199,5 +239,67 @@ details[open] .char-story {
   border-radius: 13px;
   top: 4%;
   position: relative;
+}
+
+.rarity {
+  width: 200px;
+}
+
+.things {
+
+}
+
+.char-info {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2vw;
+  position: absolute;
+  top: 17rem;
+  left: 20%;
+}
+
+.p-m-list {
+  font-size: xx-large;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+}
+
+.plus {
+  font-size: x-large
+}
+
+.minus {
+  font-size: x-large
+}
+
+ul {
+
+}
+
+.char-arts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  margin-top: 53px;
+  align-content: space-between;
+  flex-direction: column;
+}
+
+.char-arts img {
+  margin-bottom: 20px;
+}
+
+.char-annotation {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.6;
+  margin-top: 30px;
+}
+
+.char-btn {
+  position: relative;
+  margin-left: 20%;
 }
 </style>

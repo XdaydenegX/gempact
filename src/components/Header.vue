@@ -22,7 +22,7 @@ export default {
     scrollTo(el) {
 
       window.scrollBy({
-        top: document.getElementById(el).getBoundingClientRect().top - 160,
+        top: document.getElementById(el).getBoundingClientRect().top - document.getElementsByTagName("header")[0].offsetHeight,
         behavior: 'smooth'
       })
     }
@@ -40,7 +40,7 @@ export default {
 <style scoped>
 
 header {
-  width: 100%;
+  width: 100vw;
   height: 16.5vh;
   background: linear-gradient(
       0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("@/assets/header-bg.png");
