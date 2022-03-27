@@ -13,34 +13,25 @@
           <div class="gallery-char" v-bind:class="[item.bg]">
             <div class="element" v-bind:class="[item.elem]"></div>
             {{item.name}}
-            <img class="char-img" :src="GetPathToImage(item.img)">
+            <img class="char-img" :src="GetPathToImage(item.img)" v-bind:class="(item.img)">
           </div>
         </summary>
         <div class="char-story">
-          <h1 class="char-name">Мона</h1>
+          <h1 class="char-name">{{item.name}}</h1>
           <div class="things">
-            <img class="char-elem" src="../assets/gidro-hover.png">
-            <img class="char-photo" src="../assets/char/char-info/mona-summary.png">
+            <img class="char-elem" :src="GetPathToImage(item.eleminfo)">
+            <img class="char-photo" :src="GetPathToImage(item.charphotosummary)">
             <div class="rarity">
-              <div class="star">&#10022; &#10022; &#10022; &#10022; &#10022;</div>
+              <div class="star">{{item.star}}</div>
             </div>
           </div>
-          <p class="citation">Судьбу нельзя изменить, ей нельзя противиться, её можно только принять.<br>Поэтому она называется судьбой.</p>
-          <div class="char-info">Мона Мегистус  —  таинственный астролог без гроша в кармане. Ее внешний вид довольно<br>
-            экстравагантен, но видимо он позволяет ей лучше сливаться со своей Гидро стихией.
-            <br>Анимация ее способностей выше всяких похвал, да и сами способности будут полезны
-            <br>большинству путешественников. И не поскупитесь заказать ей обед ведь астролог это не
-            <br>художник он не должен быть голоден, тем более такая милашка.</div>
-          <div class="char-arts">
-            <img src=../assets/char/char-info/char-art-1.jpg>
-            <img src=../assets/char/char-info/char-art-2.jpg>
-            <img src=../assets/char/char-info/char-art-3.jpg>
-            <img src=../assets/char/char-info/char-gif.gif>
+          <i><p class="citation">{{item.citation}}</p></i>
+          <div class="char-info">{{item.info}}</div>
+          <div class="char-arts" v-for="photo in item.photo">
+            <img :src="GetPathToImage(photo)">
           </div>
           <div class="char-annotation">
-            <span>Характеристики персонажа можно будет<br>
-              увидеть в подборе отрядов при выборе<br>
-              этого персонажа</span>
+            <span>{{item.charspan}}</span>
           </div>
           <button @click="CloseDetails($event.target)" class="char-btn">Скрыть</button>
         </div>
@@ -52,7 +43,7 @@
 
 
 <script>
-
+import  char from '../data/char.json'
 export default {
   methods: {
     CloseDetails: function (el) {
@@ -64,33 +55,13 @@ export default {
       el.parentElement.parentElement.removeAttribute("open");
     },
     GetPathToImage: function (img) {
-      return new URL(`../assets/char/${img}.png`, import.meta.url).href;
+      return new URL(`../assets/${img}`, import.meta.url).href;
     },
   },
   name: "GalleryView",
   data: function () {
     return {
-      char: [{
-        id: "char-1",
-        bg: "mondshtat",
-        elem: "gidro",
-        name: "Мона",
-        img: "mona",
-        eleminfo: "../assets/gidro-hover.png",
-        star: "&#10022; &#10022; &#10022; &#10022; &#10022;",
-        info: "Мона Мегистус  —  таинственный астролог без гроша в кармане. Ее внешний вид довольно\n" +
-            "экстравагантен, но видимо он позволяет ей лучше сливаться со своей Гидро стихией.\n" +
-            "Анимация ее способностей выше всяких похвал, да и сами способности будут полезны\n" +
-            "большинству путешественников. И не поскупитесь заказать ей обед ведь астролог это не\n" +
-            "художник он не должен быть голоден, тем более такая милашка.",
-        citation: "Судьбу нельзя изменить, ей нельзя противиться, её можно только принять.\n" +
-            "Поэтому она называется судьбой.",
-        charphotoone: "../assets/char/char-info/char-art-1.jpg",
-        charphototwo: "../assets/char/char-info/char-art-2.jpg",
-        charphotothree: "../assets/char/char-info/char-art-3.jpg",
-        chargif: "../assets/char/char-info/char-gif.gif",
-        charspan: "Характеристики персонажа можно будет\n" + "увидеть в подборе отрядов при выборе\n" + "этого персонажа"
-      }]
+      char: char
     }
   },
 }
@@ -205,13 +176,49 @@ details > summary {
   background-size: cover;
 }
 
+.gallery-char:hover.mondshtat .element.piro {
+  opacity: 1;
+  background: url("../assets/elem/piro.png");
+  transition: all 0.9s;
+  background-position: center center;
+  background-size: cover;
+}
+
+.element.piro {
+  background: url("../assets/opacity/piro-elem.png");
+  opacity: 0.6;
+  background-position: center center;
+  background-size: cover;
+}
+
+.gallery-char:hover.mondshtat .element.elektro {
+  opacity: 1;
+  background: url("../assets/elem/elektro.png");
+  transition: all 0.9s;
+  background-position: center center;
+  background-size: cover;
+}
+
+.element.elektro {
+  background: url("../assets/opacity/electro-elem.png");
+  opacity: 0.6;
+  background-position: center center;
+  background-size: cover;
+}
 
 
 
 .char-img {
   right: 8%;
   position: absolute;
-  width: 24%;
+  width: 30%;
+  transition: all 0.9s;
+}
+
+.char-img {
+  right: 8%;
+  position: absolute;
+  width: 30%;
   transition: all 0.9s;
 }
 
@@ -222,7 +229,7 @@ details {
   transition: all 0.9s;
 }
 details[open] {
-  margin-bottom: 30%;
+  margin-bottom: 10%;
   cursor: pointer;
 }
 
@@ -253,6 +260,7 @@ details[open] .char-story {
   position: relative;
   width: 200px;
   display: flex;
+  margin-bottom: 1vw;
 }
 
 .rarity {
@@ -271,6 +279,7 @@ details[open] .char-story {
 }
 
 .char-photo {
+  width: 200px;
   height: 300px;
   border-radius: 13px;
   top: 4%;
@@ -290,8 +299,9 @@ details[open] .char-story {
   justify-content: center;
   font-size: 1.2vw;
   position: absolute;
-  top: 17rem;
+  top: 20rem;
   left: 20%;
+  width: 74%;
 }
 
 .citation {
@@ -301,6 +311,16 @@ details[open] .char-story {
   text-align: center;
   margin-top: 2vw;
   justify-content: center;
+}
+
+.char-arts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  margin-top: 53px;
+  align-content: space-between;
+  flex-direction: column;
 }
 
 .char-arts {
@@ -323,10 +343,21 @@ details[open] .char-story {
   text-align: center;
   opacity: 0.6;
   margin-top: 30px;
+  width: 100%;
+}
+.char-annotation span {
+  width: 330px;
 }
 
 .char-btn {
   position: relative;
   margin-left: 20%;
 }
+
+.char-arts img {
+  object-fit: contain;
+  width: 1000px;
+  height: 500px;
+}
+
 </style>
