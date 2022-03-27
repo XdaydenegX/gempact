@@ -13,7 +13,7 @@
           <div class="gallery-char" v-bind:class="[item.bg]">
             <div class="element" v-bind:class="[item.elem]"></div>
             {{item.name}}
-            <img class="char-img" :src="`src/assets/char/${item.img}.png`">
+            <img class="char-img" :src="GetPathToImage(item.img)">
           </div>
         </summary>
         <div class="char-story">
@@ -55,27 +55,42 @@
 
 export default {
   methods: {
-    CloseDetails: function(el) {
+    CloseDetails: function (el) {
       console.log(el);
       window.scrollBy({
         top: el.parentElement.parentElement.getBoundingClientRect().top - document.getElementsByTagName("header")[0].offsetHeight - 20,
         // behavior: "smooth"
       })
       el.parentElement.parentElement.removeAttribute("open");
-    }
+    },
+    GetPathToImage: function (img) {
+      return new URL(`../assets/char/${img}.png`, import.meta.url).href;
+    },
   },
   name: "GalleryView",
-  data: function() {
+  data: function () {
     return {
-      char: [ {id: "char-1",  bg: "mondshtat", elem: "gidro", name: "Мона", img: "mona", eleminfo: "../assets/gidro-hover.png",
-            star: "&#10022; &#10022; &#10022; &#10022; &#10022;", info: "Мона Мегистус  —  таинственный астролог без гроша в кармане. Ее внешний вид довольно\n" +
+      char: [{
+        id: "char-1",
+        bg: "mondshtat",
+        elem: "gidro",
+        name: "Мона",
+        img: "mona",
+        eleminfo: "../assets/gidro-hover.png",
+        star: "&#10022; &#10022; &#10022; &#10022; &#10022;",
+        info: "Мона Мегистус  —  таинственный астролог без гроша в кармане. Ее внешний вид довольно\n" +
             "экстравагантен, но видимо он позволяет ей лучше сливаться со своей Гидро стихией.\n" +
             "Анимация ее способностей выше всяких похвал, да и сами способности будут полезны\n" +
             "большинству путешественников. И не поскупитесь заказать ей обед ведь астролог это не\n" +
-            "художник он не должен быть голоден, тем более такая милашка.", citation: "Судьбу нельзя изменить, ей нельзя противиться, её можно только принять.\n" +
-            "Поэтому она называется судьбой.", charphotoone: "../assets/char/char-info/char-art-1.jpg", charphototwo: "../assets/char/char-info/char-art-2.jpg",
-            charphotothree: "../assets/char/char-info/char-art-3.jpg", chargif: "../assets/char/char-info/char-gif.gif",
-            charspan: "Характеристики персонажа можно будет\n" + "увидеть в подборе отрядов при выборе\n" + "этого персонажа"}]
+            "художник он не должен быть голоден, тем более такая милашка.",
+        citation: "Судьбу нельзя изменить, ей нельзя противиться, её можно только принять.\n" +
+            "Поэтому она называется судьбой.",
+        charphotoone: "../assets/char/char-info/char-art-1.jpg",
+        charphototwo: "../assets/char/char-info/char-art-2.jpg",
+        charphotothree: "../assets/char/char-info/char-art-3.jpg",
+        chargif: "../assets/char/char-info/char-gif.gif",
+        charspan: "Характеристики персонажа можно будет\n" + "увидеть в подборе отрядов при выборе\n" + "этого персонажа"
+      }]
     }
   },
 }
