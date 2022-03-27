@@ -18,12 +18,9 @@
 import GalleryBlock from "../components/GalleryBlock.vue";
 
 export default {
-
   name: "Home",
   components: {
     GalleryBlock
-  },
-  computed: {
   }
 }
 </script>

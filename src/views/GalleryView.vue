@@ -8,36 +8,29 @@
     <button onclick="window.location = '/' ">Вернуться назад</button>
     <div class="gallery-container">
       <h1>Мондштадт</h1>
-      <details> <!-- v-for-->
+      <details v-for="item in char" v-bind="{id: item.id}"> <!-- v-for-->
         <summary>
-          <div class="gallery-char">
-            <div class="element gidro"></div>
-            Мона
-            <img class="char-img" src=../assets/char/mona.png>
+          <div class="gallery-char" v-bind:class="[item.bg]">
+            <div class="element" v-bind:class="[item.elem]"></div>
+            {{item.name}}
+            <img class="char-img" :src="`src/assets/char/${item.img}.png`">
           </div>
         </summary>
         <div class="char-story">
           <h1 class="char-name">Мона</h1>
           <div class="things">
-            <img class="char-elem" src=../assets/gidro-hover.png>
+            <img class="char-elem" src="../assets/gidro-hover.png">
             <img class="char-photo" src="../assets/char/char-info/mona-summary.png">
             <div class="rarity">
               <div class="star">&#10022; &#10022; &#10022; &#10022; &#10022;</div>
             </div>
           </div>
-          <p class="p-m-list">Сильные и слабые стороны персонажа Мона</p>
-          <ul>
-            <h1 class="plus">Плюсы</h1>
-            <li>Уникальная анимация и скорость движения и<br>уворота</li>
-            <li>Создание приманки для врагов посредством<br>использования элементального навыка</li>
-            <li>Сильный Взрыв стихий и дополнительный урон<br>элементальных реакций</li>
-          </ul>
-          <ul>
-            <h1 class="minus">Минусы</h1>
-            <li>Низкие показатели защиты и здоровья</li>
-            <li>Малый урон без элементальных реакций</li>
-          </ul>
-          <div class="char-info">Мона Мегистус  —  таинственный астролог без гроша в кармане. Ее внешний вид довольно<br>экстравагантен, но видимо он позволяет ей лучше сливаться со своей Гидро стихией.<br>Анимация ее способностей выше всяких похвал, да и сами способности будут полезны<br>большинству путешественников. И не поскупитесь заказать ей обед ведь астролог это не<br>художник он не должен быть голоден, тем более такая милашка.</div>
+          <p class="citation">Судьбу нельзя изменить, ей нельзя противиться, её можно только принять.<br>Поэтому она называется судьбой.</p>
+          <div class="char-info">Мона Мегистус  —  таинственный астролог без гроша в кармане. Ее внешний вид довольно<br>
+            экстравагантен, но видимо он позволяет ей лучше сливаться со своей Гидро стихией.
+            <br>Анимация ее способностей выше всяких похвал, да и сами способности будут полезны
+            <br>большинству путешественников. И не поскупитесь заказать ей обед ведь астролог это не
+            <br>художник он не должен быть голоден, тем более такая милашка.</div>
           <div class="char-arts">
             <img src=../assets/char/char-info/char-art-1.jpg>
             <img src=../assets/char/char-info/char-art-2.jpg>
@@ -56,7 +49,10 @@
     <h1>Coming soon...</h1>
   </main>
 </template>
+
+
 <script>
+
 export default {
   methods: {
     CloseDetails: function(el) {
@@ -67,9 +63,25 @@ export default {
       })
       el.parentElement.parentElement.removeAttribute("open");
     }
-  }
+  },
+  name: "GalleryView",
+  data: function() {
+    return {
+      char: [ {id: "char-1",  bg: "mondshtat", elem: "gidro", name: "Мона", img: "mona", eleminfo: "../assets/gidro-hover.png",
+            star: "&#10022; &#10022; &#10022; &#10022; &#10022;", info: "Мона Мегистус  —  таинственный астролог без гроша в кармане. Ее внешний вид довольно\n" +
+            "экстравагантен, но видимо он позволяет ей лучше сливаться со своей Гидро стихией.\n" +
+            "Анимация ее способностей выше всяких похвал, да и сами способности будут полезны\n" +
+            "большинству путешественников. И не поскупитесь заказать ей обед ведь астролог это не\n" +
+            "художник он не должен быть голоден, тем более такая милашка.", citation: "Судьбу нельзя изменить, ей нельзя противиться, её можно только принять.\n" +
+            "Поэтому она называется судьбой.", charphotoone: "../assets/char/char-info/char-art-1.jpg", charphototwo: "../assets/char/char-info/char-art-2.jpg",
+            charphotothree: "../assets/char/char-info/char-art-3.jpg", chargif: "../assets/char/char-info/char-gif.gif",
+            charspan: "Характеристики персонажа можно будет\n" + "увидеть в подборе отрядов при выборе\n" + "этого персонажа"}]
+    }
+  },
 }
 </script>
+
+
 <style>
 @media (min-width: 1024px) {
   h1 {
@@ -136,19 +148,21 @@ details > summary {
   list-style: none;
 }
 
-.gallery-char:hover {
+
+
+.gallery-char:hover.mondshtat {
   background: url("../assets/mondshtat-bg.png");
   background-position: 0 center;
   border: 20px solid rgba(18, 0, 36, 0.9);
   transition: all 0.9s;
   text-shadow: 4px 4px 25px #000000;
 }
-.gallery-char:hover .char-img {
+.gallery-char:hover.mondshtat .char-img {
   transform: scale(2) translateY(17%);
   transition: all 0.9s;
 }
 
-.gallery-char:hover .element.gidro {
+.gallery-char:hover.mondshtat .element.gidro {
   opacity: 1;
   background: url("../assets/gidro-hover.png");
   transition: all 0.9s;
@@ -169,9 +183,16 @@ details > summary {
   opacity: 0.5;
   transition: all 0.9s;
 }
-.gidro {
-  background-image: url("../assets/opacity/gidro-elem.png");
+.element.gidro {
+  background: url("../assets/opacity/gidro-elem.png");
+  opacity: 0.6;
+  background-position: center center;
+  background-size: cover;
 }
+
+
+
+
 .char-img {
   right: 8%;
   position: absolute;
@@ -258,22 +279,13 @@ details[open] .char-story {
   left: 20%;
 }
 
-.p-m-list {
-  font-size: xx-large;
+.citation {
+  position: relative;
+  font-size: x-large;
+  display: flex;
+  text-align: center;
   margin-top: 2vw;
-  margin-bottom: 1vw;
-}
-
-.plus {
-  font-size: x-large
-}
-
-.minus {
-  font-size: x-large
-}
-
-ul {
-
+  justify-content: center;
 }
 
 .char-arts {

@@ -8,10 +8,13 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "firebase": "^9.6.10",
     "require": "^2.4.20",
+    "sqlite3": "^5.0.2",
     "vue": "^3.2.31",
     "vue-loader": "^17.0.0",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vuefire": "^2.2.5"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
