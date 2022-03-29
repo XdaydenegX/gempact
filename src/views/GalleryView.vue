@@ -8,12 +8,74 @@
     <button onclick="window.location = '/' ">Вернуться назад</button>
     <div class="gallery-container">
       <h1>Мондштадт</h1>
-      <details v-for="item in char" v-bind="{id: item.id}"> <!-- v-for-->
+      <details v-for="item in mondshtat" v-bind="{id: item.id}"> <!-- v-for-->
         <summary>
           <div class="gallery-char" v-bind:class="[item.bg]">
             <div class="element" v-bind:class="[item.elem]"></div>
             {{item.name}}
-            <img class="char-img" :src="GetPathToImage(item.img)" v-bind:class="(item.img)">
+            <img class="char-img" :src="GetPathToImage(item.img)">
+          </div>
+        </summary>
+        <div class="char-story">
+          <h1 class="char-name">{{item.name}}</h1>
+          <div class="things">
+            <img class="char-elem" :src="GetPathToImage(item.eleminfo)">
+            <img class="char-photo" :src="GetPathToImage(item.charphotosummary)">
+            <div class="rarity">
+              <div class="star">{{item.star}}</div>
+            </div>
+          </div>
+          <i><p class="citation">{{item.citation}}</p></i>
+          <div class="char-info">{{item.info}}</div>
+          <div class="char-arts" v-for="photo in item.photo">
+            <img :src="GetPathToImage(photo)">
+          </div>
+          <div class="char-annotation">
+            <span>{{item.charspan}}</span>
+          </div>
+          <button @click="CloseDetails($event.target)" class="char-btn">Скрыть</button>
+        </div>
+      </details>
+    </div>
+    <div class="gallery-container">
+      <h1>Ли Юэ</h1>
+      <details v-for="item in liyue" v-bind="{id: item.id}"> <!-- v-for-->
+        <summary>
+          <div class="gallery-char" v-bind:class="[item.bg]">
+            <div class="element" v-bind:class="[item.elem]"></div>
+            {{item.name}}
+            <img class="char-img" :src="GetPathToImage(item.img)">
+          </div>
+        </summary>
+        <div class="char-story">
+          <h1 class="char-name">{{item.name}}</h1>
+          <div class="things">
+            <img class="char-elem" :src="GetPathToImage(item.eleminfo)">
+            <img class="char-photo" :src="GetPathToImage(item.charphotosummary)">
+            <div class="rarity">
+              <div class="star">{{item.star}}</div>
+            </div>
+          </div>
+          <i><p class="citation">{{item.citation}}</p></i>
+          <div class="char-info">{{item.info}}</div>
+          <div class="char-arts" v-for="photo in item.photo">
+            <img :src="GetPathToImage(photo)">
+          </div>
+          <div class="char-annotation">
+            <span>{{item.charspan}}</span>
+          </div>
+          <button @click="CloseDetails($event.target)" class="char-btn">Скрыть</button>
+        </div>
+      </details>
+    </div>
+    <div class="gallery-container">
+      <h1>Инадзума</h1>
+      <details v-for="item in inadzuma" v-bind="{id: item.id}"> <!-- v-for-->
+        <summary>
+          <div class="gallery-char" v-bind:class="[item.bg]">
+            <div class="element" v-bind:class="[item.elem]"></div>
+            {{item.name}}
+            <img class="char-img" :src="GetPathToImage(item.img)">
           </div>
         </summary>
         <div class="char-story">
@@ -43,11 +105,12 @@
 
 
 <script>
-import  char from '../data/char.json'
+import  mondshtat from '../data/mondshtat.json'
+import liyue from '../data/liyue.json'
+import inadzuma from '../data/inadzuma.json'
 export default {
   methods: {
     CloseDetails: function (el) {
-      console.log(el);
       window.scrollBy({
         top: el.parentElement.parentElement.getBoundingClientRect().top - document.getElementsByTagName("header")[0].offsetHeight - 20,
         // behavior: "smooth"
@@ -61,7 +124,9 @@ export default {
   name: "GalleryView",
   data: function () {
     return {
-      char: char
+      mondshtat: mondshtat,
+      liyue: liyue,
+      inadzuma: inadzuma
     }
   },
 }
@@ -139,7 +204,7 @@ details > summary {
 .gallery-char:hover.mondshtat {
   background: url("../assets/mondshtat-bg.png");
   background-position: 0 center;
-  border: 20px solid rgba(18, 0, 36, 0.9);
+  border: 10px solid rgba(0, 7, 36, 0.9);
   transition: all 0.9s;
   text-shadow: 4px 4px 25px #000000;
 }
@@ -155,6 +220,60 @@ details > summary {
   background-position: center center;
   background-size: cover;
 }
+
+.gallery-char:hover.mondshtat .element.geo {
+  opacity: 1;
+  background: url("../assets/gidro-hover.png");
+  transition: all 0.9s;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+.gallery-char:hover.liyue {
+  background: url("../assets/liyue-bg.jpg");
+  background-position: 0 center;
+  border: 10px solid rgba(36, 11, 0, 0.9);
+  transition: all 0.9s;
+  text-shadow: 4px 4px 25px #000000;
+}
+.gallery-char.liyue {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/liyue-bg.jpg");
+
+  background-position: center center;
+
+}
+.gallery-char:hover.liyue .char-img {
+  transform: scale(2) translateY(17%);
+  transition: all 0.9s;
+}
+
+.gallery-char:hover.inadzuma {
+  background: url("../assets/inadzuma-bg.jpg");
+  background-position: 0 center;
+  border: 10px solid rgb(26, 0, 40);
+  transition: all 0.9s;
+  text-shadow: 4px 4px 25px #000000;
+}
+.gallery-char.inadzuma {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/inadzuma-bg.jpg");
+
+  background-position: center center;
+
+}
+.gallery-char:hover.inadzuma .char-img {
+  transform: scale(2) translateY(17%);
+  transition: all 0.9s;
+}
+
+.gallery-char:hover.liyue .element.gidro {
+  opacity: 1;
+  background: url("../assets/gidro-hover.png");
+  transition: all 0.9s;
+  background-position: center center;
+  background-size: cover;
+}
+
 
 .element {
   object-fit: cover;
@@ -191,6 +310,63 @@ details > summary {
   background-size: cover;
 }
 
+.element.geo {
+  background: url("../assets/opacity/geo-elem.png");
+  opacity: 0.6;
+  background-position: center center;
+  background-size: cover;
+}
+
+.gallery-char:hover.liyue .element.elektro {
+  opacity: 1;
+  background: url("../assets/elem/elektro.png");
+  transition: all 0.9s;
+  background-position: center center;
+  background-size: cover;
+}
+
+.gallery-char:hover.liyue .element.geo {
+  opacity: 1;
+  background: url("../assets/elem/geo.png");
+  transition: all 0.9s;
+  background-position: center center;
+  background-size: cover;
+}
+
+.gallery-char:hover.liyue .element.crio {
+  opacity: 1;
+  background: url("../assets/elem/crio.png");
+  transition: all 0.9s;
+  background-position: center center;
+  background-size: cover;
+}
+
+.element.crio {
+  background: url("../assets/opacity/crio-elem.png");
+  opacity: 0.6;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+.gallery-char:hover.liyue .element.piro {
+  opacity: 1;
+  background: url("../assets/elem/piro.png");
+  transition: all 0.9s;
+  background-position: center center;
+  background-size: cover;
+}
+
+.element.piro {
+  background: url("../assets/opacity/piro-elem.png");
+  opacity: 0.6;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+
+
 .gallery-char:hover.mondshtat .element.elektro {
   opacity: 1;
   background: url("../assets/elem/elektro.png");
@@ -205,6 +381,39 @@ details > summary {
   background-position: center center;
   background-size: cover;
 }
+
+.gallery-char:hover.mondshtat .element.anemo {
+  opacity: 1;
+  background: url("../assets/elem/anemo.png");
+  transition: all 0.9s;
+  background-position: center center;
+  background-size: cover;
+}
+
+.element.anemo  {
+  background: url("../assets/opacity/anemo-elem.png");
+  opacity: 0.6;
+  background-position: center center;
+  background-size: cover;
+}
+
+.gallery-char:hover.inadzuma .element.crio {
+  opacity: 1;
+  background: url("../assets/elem/crio.png");
+  transition: all 0.9s;
+  background-position: center center;
+  background-size: cover;
+}
+
+.element.crio {
+  background: url("../assets/opacity/crio-elem.png");
+  opacity: 0.6;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+
 
 
 
@@ -297,7 +506,7 @@ details[open] .char-story {
 .char-info {
   display: flex;
   justify-content: center;
-  font-size: 1.2vw;
+  font-size: x-large;
   position: absolute;
   top: 20rem;
   left: 20%;
@@ -360,4 +569,8 @@ details[open] .char-story {
   height: 500px;
 }
 
+
+.gallery-container {
+  margin-bottom: 4vw;
+}
 </style>
