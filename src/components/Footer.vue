@@ -49,7 +49,8 @@ footer {
 
 .footer {
   display: flex;
-  height: 59vh;
+  height: 100%;
+  position: absolute;
   width: 100%;
   margin-top: auto;
   background-size: cover;
