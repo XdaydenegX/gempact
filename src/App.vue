@@ -16,6 +16,15 @@ export default  {
   components: {
     Header,
     Footer
+  },
+  methods: {
+    isMobile() {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
+    }
   }
 }
 </script>
@@ -46,6 +55,7 @@ body,
   overflow-x: hidden;
   height: auto !important;
 }
+
 main {
   position: relative;
   width: 100%;
@@ -56,9 +66,22 @@ main {
   /* justify-self: center; */
   /* align-self: center; */
   /* align-items: center; */
-  justify-content: center;
   flex: 1 1 auto;
   margin-top: 10%;
   margin-bottom: 15%;
 }
+
+
+
+
+@media (max-width: 500px) {
+  html, body, #app {
+    height: 100% !important;
+  }
+  main {
+    top: 230px;
+  }
+}
+
+
 </style>

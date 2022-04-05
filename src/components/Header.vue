@@ -1,5 +1,22 @@
 <template>
-  <header>
+
+  <header v-if="isMobile()" class="mobile">
+    <img src="../assets/mobile/icon-mobile.png" class="icon">
+    <div class="nav">
+      <a @click="scrollTo('card-1')" >
+        <img class="gli" src="../assets/mobile/gli.png">
+      </a>
+      <a @click="scrollTo('card-1')">
+        <img class="sqi" src="../assets/mobile/sqi.png">
+      </a>
+      <a @click="scrollTo('card-1')">
+        <img class="wi" src="../assets/mobile/wi.png">
+      </a>
+    </div>
+  </header>
+
+
+  <header v-else>
     <div class="gp-bg" onclick="window.location = '/'">
       <div class="sitename">Gempact</div>
     </div>
@@ -25,19 +42,70 @@ export default {
         top: document.getElementById(el).getBoundingClientRect().top - document.getElementsByTagName("header")[0].offsetHeight,
         behavior: 'smooth'
       })
+    },
+    isMobile() {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
     }
   },
   data() {
     return {
       home: window.location.pathname == '/' ? true : false,
     }
-  }
-
+  },
 }
 
 </script>
 
 <style scoped>
+
+header.mobile {
+  background: linear-gradient(180deg, rgba(92, 43, 142, 0.5) 0%, rgba(0, 0, 0, 0) 100%), url("@/assets/mobile/header-mobile.png");
+  width: 100%;
+  height: 244px;
+  background-size: cover;
+  left: 0px;
+  top: 0px;
+  background-repeat: no-repeat;
+}
+
+.icon {
+  object-fit: contain;
+  height: 70%;
+  width: 100%;
+  top: 2%;
+}
+
+header.mobile a {
+  display: flex;
+  align-self: center;
+  position: relative;
+  cursor: pointer;
+  font-size: x-large;
+  justify-content: center;
+}
+
+.nav {
+  height: 18%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 2%;
+  justify-content: space-evenly;
+}
+
+.gli, .sqi, .wi {
+  object-fit: cover;
+  width: 80%;
+}
+
+
+
+
+
 
 header {
   width: 100vw;

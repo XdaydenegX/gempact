@@ -1,13 +1,15 @@
 v<template>
-  <footer>
+  <footer v-if="isMobile()" class="mobile">
+
+  </footer>
+
+
+  <footer v-else>
     <div class="xiao"></div>
-
-
     <div class="footer">
       <div class="call">Связь</div>
       <img class="underline" src="@/assets/call-underground.png">
       <div class="gidro" @click="GoVk"></div>
-
     </div>
   </footer>
 </template>
@@ -18,22 +20,16 @@ import GalleryBlock from "./GalleryBlock.vue";
 export default {
   name: "Footer",
   methods: {
-    // HoverSrc: function(event) {
-    //   console.log(event);
-    //   event.path[0].setAttribute("src", require("@/assets/vk-lighter.png"));
-    //   event.path[0].classList.toggle("active");
-    //
-    //
-    // },
-    //   UnHoverSrc: function(event) {
-    //   console.log(event);
-    //     event.path[0].setAttribute("src", require("@/assets/vk-nolighter.png"));
-    //     event.path[0].classList.toggle("active");
-    //
-    //   }
     GoVk: function (event) {
       console.log(event)
       window.location = 'https://vk.com/kakoy_yura_uspakoysa';
+    },
+    isMobile() {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
     }
   }
 }
@@ -41,6 +37,22 @@ export default {
 </script>
 
 <style scoped>
+
+footer.mobile {
+  width: 100vw;
+  height: 30vw;
+  position: absolute;
+  top: 0;
+  background-color: #2c3e50;
+}
+
+
+
+
+
+
+
+
 footer {
   width: 100vw;
   height: 30vw;
