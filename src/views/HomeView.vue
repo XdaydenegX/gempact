@@ -3,8 +3,13 @@
 <template>
 
 <main v-if="isMobile()" class="mobile">
-  <div class="q" @click="toggleElement(this.$el)">?</div>
-  <div class="ant" v-show="isElVisible">dddddd</div>
+  <div class="q" @click="toggleElement('q')" style="opacity: 1;">?</div>
+  <div class="ant" v-show="isElVisible">Данный сайт поможет новичкам в игре<br>Genshin Impact собрать отряд из<br>определленных
+    персонажей,<br>продемонстрирует их<br>способности и материалы для прокачки.<br><br>
+    Часть информации будет субъективно<br>личным мнением создателей сайта
+  </div>
+  <GalleryBlock></GalleryBlock>
+  <h1 class="cs-mobile">Coming soon...</h1>
 </main>
 
 
@@ -41,7 +46,18 @@ export default {
     },
     toggleElement(el) {
       this.isElVisible = !this.isElVisible
-      el.style.opacity = (el.style.opacity == 0.5) ? 1: 0.5;
+      console.log(document.getElementsByClassName(el)[0].style.opacity);
+      if (document.getElementsByClassName(el)[0].style.opacity == 1 || null) {
+        document.getElementsByClassName(el)[0].setAttribute("style", "opacity: 0.5;")
+        document.querySelector('.card-mobile').setAttribute('style', "margin-top: 35vw;")
+
+      }
+      else  {
+        document.getElementsByClassName(el)[0].setAttribute("style", "opacity: 1;")
+        document.querySelector('.card-mobile').setAttribute('style', "margin-top: 0;")
+
+      }
+      document.getElementsByClassName(el)[0].style.opacity = (el.style.opacity == 0.5) ? 1: 0.5;
     }
   },
   data: () => {
@@ -69,22 +85,29 @@ main.mobile .q {
   font-size: 6vw;
   transition: all 0.9s;
   color: black;
-  z-index:5;
+  z-index: 5;
+  opacity: 1;
 }
 
 main.mobile .ant {
-  width: 92%;
+  width: 96%;
   left: 2%;
   text-align: center;
   height: 170px;
   opacity: 1;
   position: absolute;
-  top: -2%;
+  top: -0.5%;
   background: rgba(18, 0, 36, 0.6);
   border: 3px solid rgba(61, 28, 95, 0.6);
   transition: all 0.9s ease-in-out;
-  animation: fadeIn-9ea40744 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  font-size: 3vw;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.55);
 }
+
 @keyframes fadeIn {
 0% {
   opacity: 0;
@@ -93,6 +116,32 @@ main.mobile .ant {
     opacity: 1;
   }
 }
+
+
+.ant:disabled {
+  margin-top: 20vw;
+}
+
+GalleryBlock {
+  transition: all 2s ease-in-out;
+  animation: fadeOut 2s ease-in-out;
+}
+@keyframes fadeOut {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 20vw;
+  }
+}
+ .cs-mobile{
+  font-size: 2rem;
+   margin-top: 10vh;
+   margin-bottom: 30vh;
+}
+
+
+
 
 
 

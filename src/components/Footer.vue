@@ -1,6 +1,17 @@
-v<template>
+<template>
   <footer v-if="isMobile()" class="mobile">
-
+    <img src="../assets/mobile/bennet.png">
+    <hr>
+    <div class="ant">
+      <img src="../assets/mobile/icon-mobile.png">
+      <div class="needflex">
+        <div class="call-mobile">Связь</div>
+        <img class="underline-mobile" src="@/assets/call-underground.png">
+        <div class="gidro-mobile" @click="GoVk"></div>
+        <span class="footer-site-name-mobile">Gempact</span>
+        <span class="footer-site-age-mobile">2022</span>
+      </div>
+    </div>
   </footer>
 
 
@@ -40,16 +51,69 @@ export default {
 
 footer.mobile {
   width: 100vw;
-  height: 30vw;
-  position: absolute;
-  top: 0;
-  background-color: #2c3e50;
+  height: 20vh;
+  background-color: #3D1C5F;
+  display: flex;
+  bottom: 0;
+  transition: all 0.9s;
 }
 
+footer.mobile img {
+  width: 41.5%;
+}
+footer.mobile hr {
+  height: 90%;
+  top: 1vh;
+  border-color: #2A0054;
+  right: 3vw;
+}
+.ant {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.needflex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 210px;
+}
+.underline-mobile {
+  position: absolute;
+  top: 19px;
+  object-fit: cover;
+  width: 55px !important;
+  left: -2px;
+}
 
-
-
-
+.footer-site-name-mobile {
+  left: 3vw;
+  opacity: 0.8;
+}
+.footer-site-age-mobile {
+  right: 2vw;
+  opacity: 0.4;
+}
+.gidro-mobile {
+  background: url("../assets/vk-nolighter.png") no-repeat center center;
+  position: absolute;
+  margin: 0 0 0 9%;
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  cursor: pointer;
+  left: 8vw;
+  bottom: -0.4vh;
+}
+.gidro-mobile:hover {
+  background: url("../assets/vk-lighter.png") no-repeat center center;
+  background-size: cover;
+  transition: all 0.9s;
+}
 
 
 

@@ -1,20 +1,19 @@
 <template>
 
   <header v-if="isMobile()" class="mobile">
-    <img src="../assets/mobile/icon-mobile.png" class="icon">
+    <img src="../assets/mobile/icon-mobile.png" class="icon" onclick="window.location = '/'">
     <div class="nav">
-      <a @click="scrollTo('card-1')" >
+      <a @click="scrollTo('card-1', 'mobile')" >
         <img class="gli" src="../assets/mobile/gli.png">
       </a>
-      <a @click="scrollTo('card-1')">
+      <a @click="scrollTo('card-2', 'mobile')">
         <img class="sqi" src="../assets/mobile/sqi.png">
       </a>
-      <a @click="scrollTo('card-1')">
-        <img class="wi" src="../assets/mobile/wi.png">
+      <a @click="scrollTo('card-3', 'mobile')">
+        <img class="wi" src="../assets/mobile/wi.png" @click="scrollTo('card-3')">
       </a>
     </div>
   </header>
-
 
   <header v-else>
     <div class="gp-bg" onclick="window.location = '/'">
@@ -35,13 +34,20 @@
 <script>
 export default {
   name: "Header",
-  methods: {
-    scrollTo(el) {
 
-      window.scrollBy({
-        top: document.getElementById(el).getBoundingClientRect().top - document.getElementsByTagName("header")[0].offsetHeight,
-        behavior: 'smooth'
-      })
+  methods: {
+    scrollTo(el, mode='desktop') {
+      console.log('click')
+      if (mode == 'desktop') {
+        window.scrollBy({
+          top: document.getElementById(el).getBoundingClientRect().top - document.getElementsByTagName("header")[0].offsetHeight,
+          behavior: 'smooth'
+        })
+      }
+
+      else {
+        document.getElementById(el).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+      }
     },
     isMobile() {
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -49,14 +55,16 @@ export default {
       } else {
         return false
       }
-    }
-  },
-  data() {
-    return {
-      home: window.location.pathname == '/' ? true : false,
-    }
-  },
-}
+    },
+    },
+    data() {
+      return {
+        home: window.location.pathname == '/' ? true : false,
+        ifScroll: false,
+      }
+    },
+
+  }
 
 </script>
 
@@ -65,11 +73,15 @@ export default {
 header.mobile {
   background: linear-gradient(180deg, rgba(92, 43, 142, 0.5) 0%, rgba(0, 0, 0, 0) 100%), url("@/assets/mobile/header-mobile.png");
   width: 100%;
-  height: 244px;
+  height: 178px;
   background-size: cover;
   left: 0px;
   top: 0px;
   background-repeat: no-repeat;
+}
+
+header.mobile.scroll {
+  top: -50%;
 }
 
 .icon {
@@ -84,7 +96,7 @@ header.mobile a {
   align-self: center;
   position: relative;
   cursor: pointer;
-  font-size: x-large;
+  width: 14%;
   justify-content: center;
 }
 
@@ -93,7 +105,7 @@ header.mobile a {
   width: 100%;
   display: flex;
   position: absolute;
-  bottom: 2%;
+  bottom: 5%;
   justify-content: space-evenly;
 }
 

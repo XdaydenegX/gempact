@@ -506,10 +506,10 @@ details[open] .char-story {
 .char-info {
   display: flex;
   justify-content: center;
-  font-size: x-large;
+  font-size: 1.45vw;
   position: absolute;
-  top: 20rem;
-  left: 20%;
+  top: 325px;
+  left: 17rem;
   width: 74%;
 }
 

@@ -24,7 +24,8 @@ export default  {
       } else {
         return false
       }
-    }
+    },
+
   }
 }
 </script>
@@ -63,10 +64,8 @@ main {
   height: 100%;
   flex-direction: column;
   display: flex;
-  /* justify-self: center; */
-  /* align-self: center; */
-  /* align-items: center; */
   flex: 1 1 auto;
+  transition: all 0.9s;
   margin-top: 10%;
   margin-bottom: 15%;
 }
@@ -78,8 +77,14 @@ main {
   html, body, #app {
     height: 100% !important;
   }
+
+  #app {
+    display: block;
+  }
   main {
-    top: 230px;
+    top: 160px;
+    height: max-content !important;
+    margin-bottom: 20vh;
   }
 }
 
