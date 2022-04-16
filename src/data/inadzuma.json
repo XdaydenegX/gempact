@@ -16,5 +16,138 @@
     "char/char-info/ayaka/ayaka-gif-2.gif",
     "char/char-info/ayaka/ayaka-gif.gif"
   ]
-}
+},
+  {
+    "id": "kazuha",
+    "bg": "inadzuma",
+    "elem": "anemo",
+    "name": "Каэдэхара Кадзуха",
+    "img": "char/kazuha.png",
+    "eleminfo": "elem/anemo.png",
+    "charphotosummary": "char/char-info/kazuha/kazuha-summary.jpg",
+    "star": "✦ ✦ ✦ ✦ ✦",
+    "info": "Странствующий самурай из Инадзумы, скромный и мягкий. За молодой и беззаботной внешностью скрывается полное невзгод прошлое. На первый взгляд беспечный юноша строго следует собственному кодексу поведения.",
+    "citation": "«Пустому сердцу весь мир будет пустой, а если сердце чистое, то и всё под небесами будет чистым»",
+    "charspan": "Характеристики персонажа можно будет увидеть в подборе отрядов при выборе этого персонажа",
+    "photo": [
+      "char/char-info/kazuha/kazuha-1.jpg",
+      "char/char-info/kazuha/kazuha-2.jpg",
+      "char/char-info/kazuha/kazuha-3.jpg",
+      "char/char-info/kazuha/kazuha-gif.gif"
+    ]
+  },
+  {
+    "id": "raiden",
+    "bg": "inadzuma",
+    "elem": "elektro",
+    "name": "Сёгун Райдэн",
+    "img": "char/raiden.png",
+    "eleminfo": "elem/elektro.png",
+    "charphotosummary": "char/char-info/raiden/raiden-summary.jpg",
+    "star": "✦ ✦ ✦ ✦ ✦",
+    "info": "Сёгун Райдэн - самое могущественное и страшное воплощение Электро в этом мире, верховный правитель сёгуната Инадзумы. Обладая мощью грома и молний, она следует одиноким путём, носящим имя вечности.",
+    "citation": "«Нет ничего ближе к небу, чем вечность.»",
+    "charspan": "Характеристики персонажа можно будет увидеть в подборе отрядов при выборе этого персонажа",
+    "photo": [
+      "char/char-info/raiden/raiden-1.jpg",
+      "char/char-info/raiden/raiden-2.jpg",
+      "char/char-info/raiden/raiden-3.jpg",
+      "char/char-info/raiden/raiden-gif.gif"
+    ]
+  },
+  {
+    "id": "sara",
+    "bg": "inadzuma",
+    "elem": "elektro",
+    "name": "Кудзё Сара",
+    "img": "char/sara.png",
+    "eleminfo": "elem/elektro.png",
+    "charphotosummary": "char/char-info/sara/sara-summary.jpg",
+    "star": "✦ ✦ ✦ ✦",
+    "info": "Генерал комиссии Тэнрё. Смелая и стремительная, как ветер, девушка, которая всегда держит своё слово. Прозванная «Верной Божеству», она посвятила жизнь сёгуну Райдэн. Преследуемая сёгуном вечность и есть вера, за которую она готова сражаться.",
+    "citation": "«Я всегда буду защищать Инадзуму и исполнять волю Наруками. Подумайте дважды, если хотите противостоять этим двум вещам.»",
+    "charspan": "Характеристики персонажа можно будет увидеть в подборе отрядов при выборе этого персонажа",
+    "photo": [
+      "char/char-info/sara/sara-1.jpg",
+      "char/char-info/sara/sara-2.jpg",
+      "char/char-info/sara/sara-3.jpg",
+      "char/char-info/sara/sara-gif.gif"
+    ]
+  },
+  {
+    "id": "thoma",
+    "bg": "inadzuma",
+    "elem": "piro",
+    "name": "Тома",
+    "img": "char/thoma.png",
+    "eleminfo": "elem/piro.png",
+    "charphotosummary": "char/char-info/thoma/thoma-summary.jpg",
+    "star": "✦ ✦ ✦ ✦",
+    "info": "Управляющий клана Камисато комиссии Ясиро. Известный в Инадзуме «местный авторитет». Дружелюбный и общительный, Тома легко вписывается в окружение, где бы он ни находился. На первый взгляд он кажется легкомысленным человеком, но на самом деле он очень ответственный. Он бывает необычайно серьёзным, будь то в работе или в общении.",
+    "citation": "«Если ты не возражаешь, как насчёт того, чтобы подружиться? Ты не пожалеешь об этом.»",
+    "charspan": "Характеристики персонажа можно будет увидеть в подборе отрядов при выборе этого персонажа",
+    "photo": [
+      "char/char-info/thoma/thoma-1.jpg",
+      "char/char-info/thoma/thoma-2.jpg",
+      "char/char-info/thoma/thoma-3.jpg",
+      "char/char-info/thoma/thoma-gif.gif"
+    ]
+  },
+  {
+    "id": "sayu",
+    "bg": "inadzuma",
+    "elem": "anemo",
+    "name": "Саю",
+    "img": "char/sayu.png",
+    "eleminfo": "elem/anemo.png",
+    "charphotosummary": "char/char-info/sayu/sayu-summary.jpg",
+    "star": "✦ ✦ ✦ ✦",
+    "info": "Саю — анемо персонаж использующий в качестве оружия двуручное оружие. Не смотря на свой маленький рост Саю идеально справляется со своими обязанностями ниндзя. Она в совершенстве овладела навыками скрытности и превращения, хотя главным ее талантом пожалуй будет навык найти время для хорошего крепкого сна.",
+    "citation": "«Что? Меня обнаружили? О, нет... я сегодня ещё не выспалась. Хай-я! Невидимка!»",
+    "charspan": "Характеристики персонажа можно будет увидеть в подборе отрядов при выборе этого персонажа",
+    "photo": [
+      "char/char-info/sayu/sayu-1.jpg",
+      "char/char-info/sayu/sayu-2.jpg",
+      "char/char-info/sayu/sayu-3.jpg",
+      "char/char-info/sayu/sayu-gif.gif"
+    ]
+  },
+  {
+  "id": "goro",
+  "bg": "inadzuma",
+  "elem": "geo",
+  "name": "Горо",
+  "img": "char/goro.png",
+  "eleminfo": "elem/geo.png",
+  "charphotosummary": "char/char-info/goro/goro-summary.gif",
+  "star": "✦ ✦ ✦ ✦",
+  "info": "Горо — глава войск Ватацуми прошедший сотни битв. Несмотря на свое звание и боевой опыт является очень милым и заботливым парнем. Для него подчиненные это не просто солдаты, для Горо и их благополучие не менее важно, чем победа в войне. Его звериная интуиция и воля всегда помогает ему найти путь к победе, даже в самой безнадежной ситуации.",
+  "citation": "«Ты мой хороший товарищ... Я никому не позволю причинить тебе вред!»",
+  "charspan": "Характеристики персонажа можно будет увидеть в подборе отрядов при выборе этого персонажа",
+  "photo": [
+    "char/char-info/goro/goro-1.jpg",
+    "char/char-info/goro/goro-2.jpg",
+    "char/char-info/goro/goro-3.jpg",
+    "char/char-info/goro/goro-gif.gif"
+  ]
+},
+  {
+    "id": "yoimiya",
+    "bg": "inadzuma",
+    "elem": "piro",
+    "name": "Ёимия",
+    "img": "char/yoimiya.png",
+    "eleminfo": "elem/piro.png",
+    "charphotosummary": "char/char-info/yoimiya/yoimiya-summary.jpeg",
+    "star": "✦ ✦ ✦ ✦ ✦",
+    "info": "Выдающийся мастер фейерверков и владелица «Фейерверков Наганохары». Также известна как «Королева праздника лета». Девушка с пламенным характером. Сплетение детской невинности и одержимости мастера проявляет себя чудесной огненной реакцией.",
+    "citation": "«Есть минутка? Пошли пускать фейерверки! У меня есть кое-что новенькое, очень крутое, хочу показать тебе!»",
+    "charspan": "Характеристики персонажа можно будет увидеть в подборе отрядов при выборе этого персонажа",
+    "photo": [
+      "char/char-info/yoimiya/yoimiya-1.jpg",
+      "char/char-info/yoimiya/yoimiya-2.jpg",
+      "char/char-info/yoimiya/yoimiya-3.jpg",
+      "char/char-info/yoimiya/yoimiya-gif.gif"
+    ]
+  }
 ]

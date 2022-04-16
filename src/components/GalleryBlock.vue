@@ -9,7 +9,7 @@
           <div class="info-mobile">
             <h1 class="title-info-mobile">{{item.titleCard}}</h1>
             <p class="description-mobile">{{item.text}}</p>
-            <button class="go" onclick="window.location = '/gallery'">Перейти</button>
+            <button class="go" @click="goURL(item.to_url)">Перейти</button>
             <span class="ant-info">{{item.description}}</span>
           </div>
         </details>
@@ -285,6 +285,7 @@ span {
   top: 2%;
   /* left: calc(50% - 52% /2); */
   justify-content: center;
+  line-height: 4vw;
 }
 .container.right h1 {
   left: 5%;
@@ -297,6 +298,7 @@ span {
   width: 40%;
   right: 12%;
   top: 28%;
+  margin-top: 0;
 }
 .container.right p {
   left: 8%;
@@ -304,14 +306,14 @@ span {
 }
 .container button {
   background: #FFCF0D;
-  border-radius: 20px;
+  border-radius: 1vw;
   font-family: "TT_Skip-E";
   position: absolute;
   right: 24%;
-  height: 6vw;
+  height: 5.5vw;
   border: 0;
-  font-size: xx-large;
-  bottom: 17%;
+  font-size: 2vw;
+  bottom: 6vw;
   width: 14vw;
   cursor: pointer;
   color: #341C00;

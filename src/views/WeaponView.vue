@@ -1,6 +1,8 @@
 <template>
   <main>
-    <h1>This is Weapon page!</h1>
+    <h1>Это страница Оружия!</h1>
+    <p>Тут пока что еще ничего нет...</p>
+    <span>Пожалуйста ожидайте...)</span>
   </main>
 </template>
 
@@ -11,5 +13,15 @@ export default {
 </script>
 
 <style scoped>
-
+h1, p, span {
+  text-align: center;
+}
+main{
+  height: 56% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
 </style>

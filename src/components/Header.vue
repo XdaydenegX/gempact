@@ -2,7 +2,7 @@
 
   <header v-if="isMobile()" class="mobile">
     <img src="../assets/mobile/icon-mobile.png" class="icon" onclick="window.location = '/'">
-    <div class="nav">
+    <div class="nav" v-if="home">
       <a @click="scrollTo('card-1', 'mobile')" >
         <img class="gli" src="../assets/mobile/gli.png">
       </a>
@@ -13,6 +13,17 @@
         <img class="wi" src="../assets/mobile/wi.png" @click="scrollTo('card-3')">
       </a>
     </div>
+    <div class="nav" v-else-if="gallery">
+      <a @click="scrollTo('mondshtat-scroll', 'mobile')" >
+        <img class="char-check" src="../assets/mobile/mondshtat-header-logo.png">
+      </a>
+      <a @click="scrollTo('liyue-scroll', 'mobile')">
+        <img class="char-check" src="../assets/mobile/liyue-header-logo.png">
+      </a>
+      <a @click="scrollTo('inadzuma-scroll', 'mobile')">
+        <img class="char-check" src="../assets/mobile/inadzuma-header-logo.png" @click="scrollTo('card-3')">
+      </a>
+    </div>
   </header>
 
   <header v-else>
@@ -20,18 +31,21 @@
       <div class="sitename">Gempact</div>
     </div>
     <div id="nav" v-if="home">
-      <!--  <router-link to="/">Home</router-link> |-->
-      <!--  <router-link to="/about">About</router-link>-->
         <a @click="scrollTo('card-1')">Галерея персонажей</a>
         <a @click="scrollTo('card-2')">Подбор отрядов</a>
         <a @click="scrollTo('card-3')">Оружие</a>
-
+    </div>
+    <div id="nav" v-else-if="gallery">
+      <a @click="scrollTo('mondshtat-scroll')">Мондштадт</a>
+      <a @click="scrollTo('liyue-scroll')">Ли Юэ</a>
+      <a @click="scrollTo('inadzuma-scroll')">Инадзума</a>
     </div>
   </header>
 
 </template>
 
 <script>
+
 export default {
   name: "Header",
 
@@ -61,6 +75,7 @@ export default {
       return {
         home: window.location.pathname == '/' ? true : false,
         ifScroll: false,
+        gallery: window.location.pathname == '/gallery' ? true : false
       }
     },
 
@@ -112,6 +127,12 @@ header.mobile a {
 .gli, .sqi, .wi {
   object-fit: cover;
   width: 80%;
+}
+.char-check {
+  object-fit: cover;
+  width: 70%;
+  background-color: #FFCF0D;
+  border-radius: 10vw;
 }
 
 
@@ -169,6 +190,12 @@ a {
   justify-content: center;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 1440px) {
+  header {
+    height: 12.5vh;
+  }
 }
 
 

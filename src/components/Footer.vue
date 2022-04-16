@@ -2,7 +2,7 @@
   <footer v-if="isMobile()" class="mobile">
     <img src="../assets/mobile/bennet.png">
     <hr>
-    <div class="ant">
+    <div class="ante">
       <img src="../assets/mobile/icon-mobile.png">
       <div class="needflex">
         <div class="call-mobile">Связь</div>
@@ -67,7 +67,7 @@ footer.mobile hr {
   border-color: #2A0054;
   right: 3vw;
 }
-.ant {
+.ante {
   display: flex;
   flex-direction: column;
   align-content: center;
