@@ -1,5 +1,5 @@
 [{
-  "id": "char-1",
+  "id": "beidou",
   "bg": "liyue",
   "elem": "elektro",
   "name": "Бэй Доу",
@@ -15,10 +15,11 @@
     "char/char-info/beidou/beidou-2.jpg",
     "char/char-info/beidou/beidou-3.jpg",
     "char/char-info/beidou/beidou-gif.gif"
-  ]
+  ],
+  "cardphoto": "char/card/beidou-card.png"
 },
   {
-    "id": "char-2",
+    "id": "ninguan",
     "bg": "liyue",
     "elem": "geo",
     "name": "Нин Гуан",
@@ -34,10 +35,11 @@
       "char/char-info/ninguan/ninguan-2.jpg",
       "char/char-info/ninguan/ninguan-gif.gif",
       "char/char-info/ninguan/ninguan-gif-2.gif"
-    ]
+    ],
+    "cardphoto": "char/card/ninguan-card.png"
   },
   {
-    "id": "char-3",
+    "id": "xinqu",
     "bg": "liyue",
     "elem": "gidro",
     "name": "Син Цю",
@@ -53,10 +55,11 @@
       "char/char-info/xinqu/xinqu-2.jpg",
       "char/char-info/xinqu/xinqu-3.jpg",
       "char/char-info/xinqu/xinqu-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/xinqu-card.png"
   },
   {
-    "id": "char-4",
+    "id": "qiqi",
     "bg": "liyue",
     "elem": "crio",
     "name": "Ци Ци",
@@ -72,10 +75,11 @@
       "char/char-info/qiqi/qiqi-2.jpg",
       "char/char-info/qiqi/qiqi-3.jpg",
       "char/char-info/qiqi/qiqi-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/qiqi-card.png"
   },
   {
-    "id": "char-5",
+    "id": "kezin",
     "bg": "liyue",
     "elem": "elektro",
     "name": "Кэ Цин",
@@ -91,10 +95,11 @@
       "char/char-info/kezin/kezin-2.jpg",
       "char/char-info/kezin/kezin-3.jpg",
       "char/char-info/kezin/kezin-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/kezin-card.png"
   },
   {
-    "id": "char-6",
+    "id": "junli",
     "bg": "liyue",
     "elem": "geo",
     "name": "Чжун Ли",
@@ -110,10 +115,11 @@
       "char/char-info/junli/junli-2.jpg",
       "char/char-info/junli/junli-gif-2.gif",
       "char/char-info/junli/junli-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/junli-card.png"
   },
   {
-    "id": "char-7",
+    "id": "ganyui",
     "bg": "liyue",
     "elem": "crio",
     "name": "Гань Юй",
@@ -129,9 +135,11 @@
       "char/char-info/ganyui/ganyui-2.jpg",
       "char/char-info/ganyui/ganyui-3.jpg",
       "char/char-info/ganyui/ganyui-gif.gif"
-    ]
-  },  {
-  "id": "char-8",
+    ],
+    "cardphoto": "char/card/ganyui-card.png"
+  },
+  {
+  "id": "hutao",
   "bg": "liyue",
   "elem": "piro",
   "name": "Ху Тао",
@@ -147,6 +155,7 @@
     "char/char-info/hutao/hutao-2.jpg",
     "char/char-info/hutao/hutao-3.jpg",
     "char/char-info/hutao/hutao-gif.gif"
-  ]
+  ],
+    "cardphoto": "char/card/hutao-card.png"
 }
 ]

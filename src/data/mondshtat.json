@@ -1,5 +1,5 @@
 [{
-  "id": "char-1",
+  "id": "mona",
   "bg": "mondshtat",
   "elem": "gidro",
   "name": "Мона",
@@ -15,10 +15,11 @@
     "char/char-info/mona/char-art-2.jpg",
     "char/char-info/mona/char-art-3.jpg",
     "char/char-info/mona/char-gif.gif"
-  ]
+  ],
+  "cardphoto": "char/card/mona-card.png"
 },
   {
-    "id": "char-2",
+    "id": "diluk",
     "bg": "mondshtat",
     "elem": "piro",
     "name": "Дилюк",
@@ -34,10 +35,11 @@
     "char/char-info/diluk/diluk-2.jpg",
     "char/char-info/diluk/diluk-3.jpg",
     "char/char-info/diluk/diluk-gif.gif"
-  ]
+  ],
+    "cardphoto": "char/card/diluk-card.png"
   },
   {
-    "id": "char-3",
+    "id": "razor",
     "bg": "mondshtat",
     "elem": "elektro",
     "name": "Рейзор",
@@ -53,10 +55,11 @@
       "char/char-info/razor/razor-2.jpg",
       "char/char-info/razor/razor-3.jpg",
       "char/char-info/razor/razor-gif.gif"
-      ]
+      ],
+    "cardphoto": "char/card/razor-card.png"
   },
   {
-    "id": "char-4",
+    "id": "Fischl",
     "bg": "mondshtat",
     "elem": "elektro",
     "name": "Фишль",
@@ -72,10 +75,11 @@
       "char/char-info/Fischl/Fischl-2.png",
       "char/char-info/Fischl/Fischl-3.png",
       "char/char-info/Fischl/Fischl-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/fischl-card.png"
   },
   {
-    "id": "char-5",
+    "id": "bennet",
     "bg": "mondshtat",
     "elem": "piro",
     "name": "Беннет",
@@ -91,10 +95,11 @@
       "char/char-info/bennet/bennet-2.jpeg",
       "char/char-info/bennet/bennet-3.jpeg",
       "char/char-info/bennet/bennet-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/bennet-card.png"
   },
   {
-    "id": "char-6",
+    "id": "barbara",
     "bg": "mondshtat",
     "elem": "gidro",
     "name": "Барбара",
@@ -110,10 +115,11 @@
       "char/char-info/barbara/barbara-2.jpg",
       "char/char-info/barbara/barbara-gif-2.gif",
       "char/char-info/barbara/barbara-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/barbara-card.png"
   },
   {
-    "id": "char-7",
+    "id": "jinn",
     "bg": "mondshtat",
     "elem": "anemo",
     "name": "Джинн",
@@ -129,10 +135,11 @@
       "char/char-info/jinn/jinn-1.png",
       "char/char-info/jinn/jinn-2.png",
       "char/char-info/jinn/jinn-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/jinn-card.png"
   },
   {
-    "id": "char-8",
+    "id": "venty",
     "bg": "mondshtat",
     "elem": "anemo",
     "name": "Венти",
@@ -148,6 +155,7 @@
       "char/char-info/venty/venty-2.jpg",
       "char/char-info/venty/venty-3.jpg",
       "char/char-info/venty/venty-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/venty-card.png"
   }
 ]

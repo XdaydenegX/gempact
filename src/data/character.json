@@ -1,0 +1,169 @@
+{"mona":  {
+  "puc": 22.5,
+  "plus": "",
+  "minus": "",
+  "talent": "",
+  "const": ""
+  },
+  "diluk" : {
+    "puc": 17.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "razor" : {
+    "puc": 12.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "Fischl" : {
+    "puc": 22.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "bennet" : {
+    "puc": 25,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "barbara" : {
+    "puc": 17.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "jinn" : {
+    "puc": 17.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "venty" : {
+    "puc": 25,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "beidou" : {
+    "puc": 17.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "ninguan" : {
+    "puc": 17.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "xinqu" : {
+    "puc": 25,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "qiqi" : {
+    "puc": 17.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "kezin" : {
+    "puc": 12.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "junli" : {
+    "puc": 25,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "ganyui" : {
+    "puc": 25,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "hutao" : {
+    "puc": 25,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "ayaka" : {
+    "puc": 25,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "kazuha" : {
+    "puc": 25,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "raiden" : {
+    "puc": 25,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "sara" : {
+    "puc": 22.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "thoma" : {
+    "puc": 12.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "sayu" : {
+    "puc": 17.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "goro" : {
+    "puc": 22.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  },
+  "yoimiya" : {
+    "puc": 22.5,
+    "plus": "",
+    "minus": "",
+    "talent": "",
+    "const": ""
+  }
+}

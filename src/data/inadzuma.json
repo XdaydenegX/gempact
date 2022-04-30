@@ -1,5 +1,5 @@
 [{
-  "id": "char-1",
+  "id": "ayaka",
   "bg": "inadzuma",
   "elem": "crio",
   "name": "Камисато Аяка",
@@ -15,7 +15,8 @@
     "char/char-info/ayaka/ayaka-2.jpg",
     "char/char-info/ayaka/ayaka-gif-2.gif",
     "char/char-info/ayaka/ayaka-gif.gif"
-  ]
+  ],
+  "cardphoto": "char/card/ayaka-card.png"
 },
   {
     "id": "kazuha",
@@ -34,7 +35,8 @@
       "char/char-info/kazuha/kazuha-2.jpg",
       "char/char-info/kazuha/kazuha-3.jpg",
       "char/char-info/kazuha/kazuha-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/kazuha-card.png"
   },
   {
     "id": "raiden",
@@ -53,7 +55,8 @@
       "char/char-info/raiden/raiden-2.jpg",
       "char/char-info/raiden/raiden-3.jpg",
       "char/char-info/raiden/raiden-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/raiden-card.png"
   },
   {
     "id": "sara",
@@ -72,7 +75,8 @@
       "char/char-info/sara/sara-2.jpg",
       "char/char-info/sara/sara-3.jpg",
       "char/char-info/sara/sara-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/sara-card.png"
   },
   {
     "id": "thoma",
@@ -91,7 +95,8 @@
       "char/char-info/thoma/thoma-2.jpg",
       "char/char-info/thoma/thoma-3.jpg",
       "char/char-info/thoma/thoma-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/thoma-card.png"
   },
   {
     "id": "sayu",
@@ -110,7 +115,8 @@
       "char/char-info/sayu/sayu-2.jpg",
       "char/char-info/sayu/sayu-3.jpg",
       "char/char-info/sayu/sayu-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/sayu-card.png"
   },
   {
   "id": "goro",
@@ -129,7 +135,8 @@
     "char/char-info/goro/goro-2.jpg",
     "char/char-info/goro/goro-3.jpg",
     "char/char-info/goro/goro-gif.gif"
-  ]
+  ],
+    "cardphoto": "char/card/goro-card.png"
 },
   {
     "id": "yoimiya",
@@ -148,6 +155,7 @@
       "char/char-info/yoimiya/yoimiya-2.jpg",
       "char/char-info/yoimiya/yoimiya-3.jpg",
       "char/char-info/yoimiya/yoimiya-gif.gif"
-    ]
+    ],
+    "cardphoto": "char/card/yoimiya-card.png"
   }
 ]
