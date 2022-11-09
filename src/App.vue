@@ -55,6 +55,11 @@ body,
   color: white;
   overflow-x: hidden;
   height: auto !important;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 main {

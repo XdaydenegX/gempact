@@ -11,7 +11,7 @@
   {
     "id": "ceremonial",
     "category": "sword",
-    "bg": "weapons/sword/ceremonial.png",
+    "bg": "weapons/sword/сeremonial.png",
     "name": "Церемониальный меч",
     "description": "Меч на Восстановление энергии с пассивкой, позволяющей продублировать элементальный навык. Подходит для саб ДД и саппортов.",
     "stars": "✦ ✦ ✦ ✦",

@@ -120,6 +120,7 @@ footer.mobile hr {
 footer {
   width: 100vw;
   height: 30vw;
+  margin-top: 20%;
   /*background: #2e012f;*/
 }
 

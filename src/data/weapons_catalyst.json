@@ -2,7 +2,7 @@
   {
     "id": "memory-of-th-dust",
     "category": "catalyst",
-    "bg": "memory-of-th-dust",
+    "bg": "weapons/catalyst/memory-of-th-dust.png",
     "name": "Память о пыли",
     "description": "Специфический катализатор для атакующих ДД: обеспечивает огромный прирост атаки, но нуждается в щитовике в команде.",
     "stars": "✦ ✦ ✦ ✦ ✦",
@@ -11,7 +11,7 @@
   {
     "id": "marine-atlas",
     "category": "catalyst",
-    "bg": "marine-atlas",
+    "bg": "weapons/catalyst/marine-atlas.png",
     "name": "Морской атлас",
     "description": "Катализатор с Мастерством Стихий и бонусом элементального урона. Подходит для саб ДД в сборках через реакции.",
     "stars": "✦ ✦ ✦ ✦",

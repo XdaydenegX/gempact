@@ -271,6 +271,8 @@ details > summary {
 }
 
 
+
+
 .gallery-char:hover.liyue {
   background: url("../assets/liyue-bg.jpg");
   background-position: 0 center;
@@ -339,6 +341,14 @@ details > summary {
 .gallery-char:hover.mondshtat .element.piro {
   opacity: 1;
   background: url("../assets/elem/piro.png");
+  transition: all 0.9s;
+  background-position: center center;
+  background-size: cover;
+}
+
+.gallery-char:hover.mondshtat .element.crio {
+  opacity: 1;
+  background: url("../assets/elem/crio.png");
   transition: all 0.9s;
   background-position: center center;
   background-size: cover;
