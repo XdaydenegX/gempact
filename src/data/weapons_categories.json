@@ -1,0 +1,27 @@
+[
+  {
+    "id": "sword",
+    "bg": "weapons/categories/sword-icon.png",
+    "name": "Меч"
+  },
+  {
+    "id": "two-hand-sword",
+    "bg": "weapons/categories/two-hand-sword-icon.png",
+    "name": "Двуручный меч"
+  },
+  {
+    "id": "spear",
+    "bg": "weapons/categories/spear-icon.png",
+    "name": "Копьё"
+  },
+  {
+    "id": "sword",
+    "bg": "weapons/categories/bow-icon.png",
+    "name": "Лук"
+  },
+  {
+    "id": "catalyst",
+    "bg": "weapons/categories/catalyst-icon.png",
+    "name": "Катализаторы"
+  }
+]

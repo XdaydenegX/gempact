@@ -1,0 +1,20 @@
+[
+  {
+    "id": "sokol",
+    "category": "sword",
+    "bg": "weapons/sword/sokol.png",
+    "name": "Меч Сокола",
+    "description": "Меч для атакующих ДД физушников. Высокая база атаки и полезная пассивка.",
+    "stars": "✦ ✦ ✦ ✦ ✦",
+    "rare": "legendary"
+  },
+  {
+    "id": "ceremonial",
+    "category": "sword",
+    "bg": "weapons/sword/ceremonial.png",
+    "name": "Церемониальный меч",
+    "description": "Меч на Восстановление энергии с пассивкой, позволяющей продублировать элементальный навык. Подходит для саб ДД и саппортов.",
+    "stars": "✦ ✦ ✦ ✦",
+    "rare": "epic"
+  }
+]

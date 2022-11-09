@@ -1,0 +1,20 @@
+[
+  {
+    "id": "favony",
+    "category": "two-hand-sword",
+    "bg": "weapons/two-hand-sword/favony.png",
+    "name": "Двуручный меч Фавония",
+    "description": "Меч для саппорта. Качает энергию персонажу и всему отряду.",
+    "stars": "✦ ✦ ✦ ✦ ✦",
+    "rare": "epic"
+  },
+  {
+    "id": "wolf-doom",
+    "category": "two-hand-sword",
+    "bg": "weapons/two-hand-sword/wolf-doom.png",
+    "name": "Волчья погибель",
+    "description": "Один из лучших клейморов в игре, подходящий для большинства атакующих персонажей с двуручником. Отлично поднимает атаку персонажа, пассивная способность бафает атаку всей пачки.",
+    "stars": "✦ ✦ ✦ ✦",
+    "rare": "legendary"
+  }
+]
